@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "house_helps",
+  "info": {
+    "singularName": "house-help",
+    "pluralName": "house-helps",
+    "displayName": "HouseHelps",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "lastName": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "emailAddress": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "nationality": {
+      "type": "enumeration",
+      "enum": [
+        "Kenyan",
+        "Tanzanian",
+        "Ugandan",
+        "Ethiopian"
+      ],
+      "required": true
+    },
+    "dob": {
+      "type": "date",
+      "required": true
+    },
+    "password": {
+      "type": "password",
+      "required": false
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "homeTown": {
+      "type": "string",
+      "required": false
+    },
+    "profilePic": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female"
+      ],
+      "required": true
+    }
+  }
+}
